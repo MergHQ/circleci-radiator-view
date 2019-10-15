@@ -40,7 +40,7 @@ function buildBackend(settings, callback) {
       })
       builds = builds.sort(function(a, b) {
         return b.started.getTime() - a.started.getTime()
-      })
+      }).slice(0, 5)
       callback(undefined, builds)
     })
   }
